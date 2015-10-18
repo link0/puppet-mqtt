@@ -55,6 +55,10 @@ class mqtt(
   $config_template = $mqtt::params::config_template,
   $pid_file        = $mqtt::params::pid_file,
 
+  $user            = $mqtt::params::user,
+  $bind_address    = $mqtt::params::bind_address,
+  $port            = $mqtt::params::port
+
 ) inherits mqtt::params {
 
   validate_string($package_name)
@@ -71,6 +75,10 @@ class mqtt(
 
   validate_string($pid_file)
   validate_absolute_path($pid_file)
+
+  validate_string($user)
+  validate_string($bind_address)
+  validate_integer($port)
 
   # Anchor this as per #8040 - this ensures that classes won't float off and
   # mess everything up.  You can read about this at:
