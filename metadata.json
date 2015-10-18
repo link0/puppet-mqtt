@@ -1,0 +1,21 @@
+{
+  "name": "link0-mqtt",
+  "version": "1.0.0",
+  "author": "link0",
+  "summary": "MQTT server puppet module",
+  "license": "MIT",
+  "source": "https://github.com/link0/puppet-mqtt",
+  "project_page": "https://github.com/link0/puppet-mqtt",
+  "issues_url": "https://github.com/link0/puppet-mqtt/issues",
+  "description": "Puppet module to manage MQTT (Mosquitto) servers",
+  "tags": [ "mqtt", "mosquitto" ],
+  "operatingsystem_support": [
+    { "operatingsystem": "Ubuntu", "operatingsystemrelease": ["12.04", "12.10", "13.04", "13.10", "14.04", "15.04"] },
+    { "operatingsystem": "Debian", "operatingsystemrelease": ["7", "8"] },
+    { "operatingsystem": "FreeBSD" }
+  ],
+  "dependencies": [
+    {"name":"puppetlabs/concat","version_requirement":">= 1.0.1 <2.0.0"},
+    {"name":"puppetlabs/stdlib","version_requirement":">= 1.0.0 <5.0.0"}
+  ]
+}
