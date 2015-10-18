@@ -17,8 +17,8 @@ Puppet module to manage Mosquitto servers
 
 ```puppet
 
-  mqtt::server { 'foo':
-
+  class { '::mqtt':
+    config_template => 'different/module/custom.conf.erb'
   }
 ```
 
