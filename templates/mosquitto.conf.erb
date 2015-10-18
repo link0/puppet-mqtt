@@ -40,7 +40,7 @@ pid_file <%= @pid_file %>
 # If run as a non-root user, this setting has no effect.
 # Note that on Windows this has no effect and so mosquitto should
 # be started by the user you wish it to run as.
-user nobody
+user <%= @user %>
 
 # The maximum number of QoS 1 and 2 messages currently inflight per
 # client.
@@ -131,9 +131,10 @@ user nobody
 # address and so will be accessible to all network interfaces.
 # bind_address ip-address/host name
 #bind_address
+<% if @bind_address %>bind_address <%= @bind_address -%><% end %>
 
 # Port to use for the default listener.
-port 1883
+port <%= @port %>
 
 # The maximum number of client connections to allow. This is
 # a per listener setting.

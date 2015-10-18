@@ -41,4 +41,8 @@ class mqtt::params {
   $config = "${etc_directory}/mosquitto/mosquitto.conf"
   $config_template = 'mqtt/mosquitto.conf.erb'
 
+  $user = 'nobody'
+  $bind_address = undef
+  $port = 1883
+
 }
